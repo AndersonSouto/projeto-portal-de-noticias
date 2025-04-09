@@ -11,39 +11,65 @@
     overflow: hidden;
     border-radius: 4px;
 
+    &:before {
+        content: "";
+        position: absolute;
+        /* inset é um top,right,left,bottom do objeto dentro do container */
+        inset: 0;
+        top:50%;
+        background: linear-gradient(
+            180deg,
+            transparent 0%,
+            #020617 100%
+        );
+    }
+
     figcaption {
         position: absolute;
         bottom: 0;
         padding: 24px;
 
-        h1 {
+        /* praticamente um IF do CSS */
+        &:has(.text-lg) {
+            padding: 12px;
+        }
+
+        h1, h3 {
             margin-top: 8px;
         }
 
     }
 }
 
-.card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    top:50%;
-    background: linear-gradient(
-        180deg,
-        transparent 0%,
-        #020617 100%
-    );
-}
-
 /*o código do .card poderia ter sido feito dessa maneira abaixo também: */
 
-/* .card {
-    position: relative;
+/* .card-{
+    position:relative;
+    overflow: hidden;
+    border-radius: 4px;
+
+    figcaption {
+        position: absolute;
+        bottom: 0;
+        padding: 12px;
+
+        h3 {
+            margin-top: 8px;
+        }
+    }
 
     &::before {
-        content: "";
-        position:absolute;
+        content:"";
+        position: absolute;
+        
         inset: 0;
-        background-color: white;
+        top: 50%;
+        background: linear-gradient(
+            180deg,
+            transparent 0%,
+            #020617 100%
+        )
+
     }
 } */
+
