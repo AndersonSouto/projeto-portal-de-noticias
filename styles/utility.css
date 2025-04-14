@@ -16,6 +16,15 @@
     gap: 16px;
 }
 
+.gap-15 {
+    gap: 15px;
+}
+
+.gap-32 {
+    gap: 32px
+}
+
+/* essas classes abaixo não fazem sentido pra mim */
 .text-2xl {
     font: var(--h1);
 }

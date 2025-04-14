@@ -36,8 +36,22 @@ a:hover {
     color: var(--brand-color-light);
 }
 
-h1, h2, h3 {
+/* comentei essa parte debaixo pois não faz sentido os 3 H's receberem o valor do pai, sendo que no final o professor ficou mudando os valores deles um por um */
+/* h1, h2, h3 {
     font: inherit;
+} */
+
+/* então eu simplesmente já setei no global que cada H vai receber seu valor respectivo como desejado no projeto do figma. */
+h1 {
+    font: var(--h1);
+}
+
+h2 {
+    font: var(--h2);
+}
+
+h3 {
+    font: var(--h3);
 }
 
 img {
@@ -52,7 +66,7 @@ img {
 
 main {
     margin-top: 40px;
-    gap: 80px;
+    gap:80px;
 }
 
 .content-tag {

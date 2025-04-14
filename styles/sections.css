@@ -119,7 +119,13 @@ section header {
 
         h2 {
             margin-top: 8px;
-            font: var(--h2);
         }
     }
+}
+
+#ai {
+    p {
+        color: var(--text-color-secondary);
+    }
+    
 }
